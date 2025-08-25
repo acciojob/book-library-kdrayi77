@@ -6,89 +6,91 @@
   <title>Book Library</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       background-color: #f8f8f8;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 20px;
     }
 
+    h1 {
+      text-align: center;
+    }
+
     .book-library {
-      max-width: 600px;
-      margin: 0 auto;
       background-color: #ffffff;
       padding: 20px;
       border-radius: 8px;
+      max-width: 800px;
+      margin: auto;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
-    .book-library h2 {
+    .book {
       text-align: center;
-      margin-bottom: 30px;
+      border-bottom: 1px solid #ddd;
+      padding: 20px 0;
     }
 
-    .book {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 30px;
-      padding: 20px;
-      border-bottom: 1px solid #eee;
+    .book:last-child {
+      border-bottom: none;
     }
 
     .book img {
-      max-width: 150px;
-      margin-bottom: 15px;
+      max-width: 200px;
+      border-radius: 4px;
+      display: block;
+      margin: 0 auto 15px;
     }
 
-    .book-title {
+    .book h2 {
       font-size: 18px;
       font-weight: bold;
-      text-transform: uppercase;
-	 background-color: rgb(46, 204, 113);
+      margin: 10px 0 5px;
     }
 
     .book-author {
-      font-size: 14px;
       color: #777777;
-      margin-bottom: 10px;
+      font-size: 14px;
+      margin: 0 0 15px;
     }
 
-    .book-price {
+    .price {
       background-color: #2ecc71;
-      color: #fff;
-      padding: 8px;
-      border-radius: 4px;
-      width: 100%;
+      color: white;
       text-align: center;
+      padding: 10px;
+      border-radius: 4px;
       font-weight: bold;
+      max-width: 200px;
+      margin: 0 auto;
     }
   </style>
 </head>
 <body>
-  <div class="book-library">
-    <h2>Book Library</h2>
+  <!-- REQUIRED h1 -->
+  <h1>Book Library</h1>  
 
+  <div class="book-library">
     <div class="book">
       <img src="https://www.bookgeeks.in/wp-content/uploads/2018/01/Spy-in-the-Amber-by-Manohar-Malgonkar.jpg" alt="Spy in the Amber">
-      <div class="book-title">SPY IN THE AMBER</div>
+      <h2>SPY IN THE AMBER</h2>
       <div class="book-author">By Manohar Malgonkar</div>
-      <div class="book-price">Rs. 299</div>
+      <div class="price">Rs. 299</div>
     </div>
 
     <div class="book">
       <img src="https://www.bookgeeks.in/wp-content/uploads/2018/01/Sacred-Games-by-Vikram-Chandra.jpg" alt="Sacred Games">
-      <div class="book-title">Sacred Games</div>
+      <h2>Sacred Games</h2>
       <div class="book-author">by Vikram Chandra</div>
-      <div class="book-price">Rs. 199</div>
+      <div class="price">Rs. 199</div>
     </div>
 
     <div class="book">
-      <img src="https://www.bookgeeks.in/wp-content/uploads/2018/01/Byomkesh-Bakshi-by-Sharadindu-Bandyopadhyay.jpg" alt="Byomkesh Bakshi">
-      <div class="book-title">BYOMKESH BAKSHI</div>
+      <img src="https://www.bookgeeks.in/wp-content/uploads/2018/01/Byomkesh-Bakshi-Stories-by-Sharadindu-Bandyopadhyay.jpg" alt="Byomkesh Bakshi">
+      <h2>BYOMKESH BAKSHI</h2>
       <div class="book-author">By Sharadindu Bandyopadhyay</div>
-      <div class="book-price">Rs. 249</div>
+      <div class="price">Rs. 249</div>
     </div>
-
   </div>
 </body>
 </html>
