@@ -2,56 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Book Library</title>
   <style>
     body {
+      margin: 0;
+      padding: 0;
       background-color: #f8f8f8;
       font-family: Arial, sans-serif;
     }
+
     .book-library {
-      background-color: #ffffff;
       width: 80%;
-      margin: 20px auto;
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #ffffff;
       padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
+
     .book-library h1 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .book {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 30px;
-      padding: 15px;
-      border-bottom: 1px solid #ddd;
-    }
-    .book img {
-      max-width: 150px;
-      margin-bottom: 15px;
-    }
-    .book h2 {
-      font-size: 18px;
-      margin: 5px 0;
-      text-align: center;
-    }
-    .book-author {
-      color: #fff;
-      background-color: #2ecc71; /* ✅ required green */
-      padding: 6px;
-      text-align: center;
-      border-radius: 4px;
-      font-size: 14px;
-      margin-bottom: 10px;
-    }
-    .price {
-      font-size: 16px;
-      font-weight: bold;
+      margin-top: 0;
       text-align: center;
       color: #333;
+    }
+
+    .book {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .book img {
+      width: 120px;
+      height: auto;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .book-details {
+      flex: 1;
+      margin-left: 20px;
+    }
+
+    .book-details h2 {
+      margin: 0;
+      font-size: 20px;
+      text-transform: uppercase; /* As per your screenshot styling */
+      color: #333;
+    }
+
+    .book-details p {
+      margin: 6px 0 0;
+      color: #777777; /* Author text color */
+      font-size: 14px;
+    }
+
+    .price {
+      background-color: #2ecc71; /* Price block background */
+      color: #ffffff;
+      padding: 8px 15px;
+      font-weight: bold;
+      border-radius: 4px;
+      white-space: nowrap;
     }
   </style>
 </head>
@@ -59,27 +76,36 @@
   <div class="book-library">
     <h1>Book Library</h1>
 
+    <!-- Book 1: Spy in the Amber -->
     <div class="book">
       <img src="https://www.bookgeeks.in/wp-content/uploads/2018/01/Spy-in-the-Amber-by-Manohar-Malgonkar.jpg" alt="Spy in the Amber">
-      <h2>SPY IN THE AMBER</h2>
-      <div class="book-author">BY Manohar Malgonkar</div>
+     <br>
+		<div class="book-details">
+        <h2>SPY IN THE AMBER</h2>
+        <p>By Manohar Malgonkar</p>
+      </div>
       <div class="price">Rs. 299</div>
     </div>
 
+    <!-- Book 2: Sacred Games -->
     <div class="book">
       <img src="https://www.bookgeeks.in/wp-content/uploads/2018/01/Sacred-Games-by-Vikram-Chandra.jpg" alt="Sacred Games">
-      <h2>Sacred Games</h2>
-      <div class="book-author">by Vikram Chandra</div>
+      <div class="book-details">
+        <h2>Sacred Games</h2>
+        <p>By Vikram Chandra</p>
+      </div>
       <div class="price">Rs. 199</div>
     </div>
 
+    <!-- Book 3: Byomkesh Bakshi -->
     <div class="book">
-      <img src="https://www.bookgeeks.in/wp-content/uploads/2018/01/Byomkesh-Bakshi-Stories-by-Sharadindu-Bandyopadhyay.jpg" alt="Byomkesh Bakshi">
-      <h2>BYOMKESH BAKSHI</h2>
-      <div class="book-author">By Sharadindu Bandyopadhyay</div>
+      <img src="https://www.bookgeeks.in/wp-content/uploads/2018/01/Byomkesh-Bakshi-by-Sharadindu-Bandyopadhyay.jpg" alt="Byomkesh Bakshi">
+      <div class="book-details">
+        <h2>BYOMKESH BAKSHI</h2>
+        <p>By Sharadindu Bandyopadhyay</p>
+      </div>
       <div class="price">Rs. 249</div>
     </div>
-
   </div>
 </body>
 </html>
